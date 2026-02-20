@@ -228,7 +228,7 @@ h2::after {
 
 .pub-list {
   display: grid;
-  gap: 18px;
+  gap: 32px;
 }
 
 .pub-item {
