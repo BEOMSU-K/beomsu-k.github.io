@@ -378,3 +378,21 @@ h2::after {
 .pub-item + .pub-item {
   margin-top: 16px;
 }
+
+/* Publications 페이지: 카테고리/연도 스타일 */
+.pub-category {
+  margin-top: 28px;
+}
+
+.pub-year {
+  margin: 18px 0 10px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #0f172a;
+  padding-bottom: 6px;
+  border-bottom: 1px solid var(--line);
+}
+
+.pub-year + .pub-list {
+  margin-bottom: 10px;
+}
