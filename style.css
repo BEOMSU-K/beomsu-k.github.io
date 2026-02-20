@@ -7,7 +7,7 @@
   --accent: #2563eb;
   --accent-dark: #1d4ed8;
   --accent-soft: #dbeafe;
-  --maxw: 1020px;
+  --maxw: 1100px;
   --radius: 14px;
   --shadow: 0 10px 28px rgba(37, 99, 235, 0.08);
 }
@@ -98,23 +98,31 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 .hero {
   display: grid;
-  grid-template-columns: 220px 1fr; /* 280 -> 220으로 축소 */
-  gap: 20px;
+  grid-template-columns: 240px 1fr; /* 왼쪽 칼럼 살짝 여유 */
+  gap: 28px;                        /* 좌우 간격 증가 */
   align-items: start;
 }
 
+.hero-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .profile-image {
-  width: 180px;      /* 사진 크기 직접 지정 */
+  width: 180px;
   height: 180px;
   aspect-ratio: 1/1;
   object-fit: cover;
-  border-radius: 14px; /* 원형 원하면 50% */
+  border-radius: 14px;
   border: 2px solid #bfdbfe;
   background: #f3f4f6;
 }
 
 .contact-block {
-  margin: 12px 0 16px;
+  width: 100%;
+  max-width: 220px;   /* SNS 박스 폭과 맞춤 */
+  margin: 14px 0 14px;
 }
 
 .contact-block p {
@@ -165,6 +173,11 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 .social-links .fa-regular {
   font-size: 1rem;
   line-height: 1;
+}
+
+.hero-right {
+  border-left: 1px solid var(--line); /* 구분선 */
+  padding-left: 26px;                 /* 선과 텍스트 간격 */
 }
 
 .hero-right h1 {
@@ -345,4 +358,17 @@ h2::after {
   text-align: center;
   font-size: 1rem;
   line-height: 1;
+}
+
+.hero-right {
+  border-left: none;
+  padding-left: 0;
+  padding-top: 8px;
+  border-top: 1px solid var(--line); /* 모바일에서는 가로 구분선 */
+  margin-top: 8px;
+}
+
+.hero-left {
+  max-width: 340px;
+  margin: 0 auto;
 }
