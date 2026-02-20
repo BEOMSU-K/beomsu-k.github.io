@@ -99,7 +99,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 .hero {
   display: grid;
   grid-template-columns: 240px 1fr; /* 왼쪽 칼럼 살짝 여유 */
-  gap: 28px;                        /* 좌우 간격 증가 */
+  gap: 34px;                        /* 좌우 간격 증가 */
   align-items: start;
 }
 
@@ -107,6 +107,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-right: 10px; /* 세로선과 왼쪽 내용 간격 추가 */
 }
 
 .profile-image {
@@ -177,7 +178,7 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 .hero-right {
   border-left: 1px solid var(--line); /* 구분선 */
-  padding-left: 26px;                 /* 선과 텍스트 간격 */
+  padding-left: 34px;                 /* 선과 텍스트 간격 */
 }
 
 .hero-right h1 {
@@ -307,10 +308,23 @@ h2::after {
 @media (max-width: 820px) {
   .hero {
     grid-template-columns: 1fr;
+    gap: 18px;
   }
+
   .hero-left {
     max-width: 340px;
+    margin: 0 auto;
+    padding-right: 0; /* 모바일에서는 오른쪽 여백 제거 */
   }
+
+  .hero-right {
+    border-left: none;
+    padding-left: 0;
+    padding-top: 10px;
+    border-top: 1px solid var(--line); /* 모바일에서만 가로선 */
+    margin-top: 6px;
+  }
+
   .hero-right h1 {
     font-size: 26px;
   }
@@ -358,17 +372,4 @@ h2::after {
   text-align: center;
   font-size: 1rem;
   line-height: 1;
-}
-
-.hero-right {
-  border-left: none;
-  padding-left: 0;
-  padding-top: 8px;
-  border-top: 1px solid var(--line); /* 모바일에서는 가로 구분선 */
-  margin-top: 8px;
-}
-
-.hero-left {
-  max-width: 340px;
-  margin: 0 auto;
 }
