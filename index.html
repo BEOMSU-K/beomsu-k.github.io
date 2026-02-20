@@ -27,26 +27,28 @@
   <main class="container page">
     <section class="hero card">
       <div class="hero-left">
+        <!-- 프로필 사진 -->
         <img src="./assets/profile.jpg" alt="Profile photo of Beom-Su Kim" class="profile-image" />
 
         <div class="contact-block">
-          <p><i class="fa-regular fa-envelope"></i> bbamsoo@naver.com</p>
+          <p><i class="fa-regular fa-envelope"></i> ergonomics.idea@gmail.com</p>
           <p><i class="fa-solid fa-location-dot"></i> Korea, Republic of</p>
         </div>
 
-        <div class="social-links">
-          <a href="https://github.com/BEOMSU-K" target="_blank" rel="noopener">
-            <i class="fab fa-github"></i><span>GitHub</span>
+        <!-- 동그란 아이콘 버튼 -->
+        <div class="social-links social-links-circle">
+          <a href="https://github.com/BEOMSU-K" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+            <i class="fab fa-github"></i>
           </a>
 
-          <!-- ORCID ID로 바꿔주세요 -->
-          <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener">
-            <i class="ai ai-orcid"></i><span>ORCID</span>
+          <!-- ORCID 주소로 바꿔주세요 -->
+          <a href="https://orcid.org/0000-0000-0000-0000" target="_blank" rel="noopener" aria-label="ORCID" title="ORCID">
+            <i class="ai ai-orcid"></i>
           </a>
 
-          <!-- 구글스칼라 user=값으로 바꿔주세요 -->
-          <a href="https://scholar.google.com/citations?hl=ko&user=Tld3-C8AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener">
-            <i class="ai ai-google-scholar"></i><span>Google Scholar</span>
+          <!-- 구글스칼라 주소 -->
+          <a href="https://scholar.google.com/citations?hl=ko&user=Tld3-C8AAAAJ&view_op=list_works&sortby=pubdate" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+            <i class="ai ai-google-scholar"></i>
           </a>
         </div>
       </div>
@@ -76,12 +78,7 @@
           <li>Communal User Needs Modeling and Validation</li>
         </ul>
 
-        <h2>News</h2>
-        <ul class="clean-list">
-          <li>2026.02 — Personal website updated on GitHub Pages.</li>
-          <li>2026.01 — Preparing PhD application and research proposal materials.</li>
-          <li>2025 — Working on IJHCI revision and related manuscripts.</li>
-        </ul>
+        <!-- News 섹션 삭제됨 -->
       </div>
     </section>
 
@@ -103,6 +100,17 @@
       <p class="more-link">
         <a href="./publications.html">See full publications →</a>
       </p>
+    </section>
+
+    <!-- CV 다운로드 섹션 (Selected publications 아래) -->
+    <section class="card">
+      <h2>CV</h2>
+      <p class="section-desc">CV PDF를 열거나 다운로드할 수 있습니다.</p>
+
+      <div class="cv-actions">
+        <a class="btn" href="./assets/CV_BeomSu_Kim.pdf" target="_blank" rel="noreferrer">Open CV (PDF)</a>
+        <a class="btn btn-outline" href="./assets/CV_BeomSu_Kim.pdf" download>Download CV</a>
+      </div>
     </section>
   </main>
 
