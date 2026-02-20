@@ -98,16 +98,17 @@ a:hover { color: var(--accent-dark); text-decoration: underline; }
 
 .hero {
   display: grid;
-  grid-template-columns: 280px 1fr;
+  grid-template-columns: 220px 1fr; /* 280 -> 220으로 축소 */
   gap: 20px;
   align-items: start;
 }
 
 .profile-image {
-  width: 100%;
+  width: 180px;      /* 사진 크기 직접 지정 */
+  height: 180px;
   aspect-ratio: 1/1;
   object-fit: cover;
-  border-radius: 14px;
+  border-radius: 14px; /* 원형 원하면 50% */
   border: 2px solid #bfdbfe;
   background: #f3f4f6;
 }
@@ -300,4 +301,48 @@ h2::after {
   .hero-right h1 {
     font-size: 26px;
   }
+}
+
+/* 소셜 버튼 세로 배치 (GitHub / ORCID / Google Scholar 한 줄씩) */
+.social-links-stack {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px;
+  width: 100%;
+  max-width: 220px;
+}
+
+.social-links-stack a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 10px;
+
+  width: 100%;
+  min-height: 42px;
+  padding: 8px 14px;
+
+  border: 1px solid #bfdbfe;
+  background: #eff6ff;
+  color: #1e3a8a;
+  border-radius: 999px;
+  text-decoration: none;
+  font-size: 0.95rem;
+
+  transition: all 0.2s ease;
+}
+
+.social-links-stack a:hover {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+  transform: translateY(-1px);
+}
+
+.social-links-stack .ai,
+.social-links-stack .fab {
+  width: 18px;
+  text-align: center;
+  font-size: 1rem;
+  line-height: 1;
 }
