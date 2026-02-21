@@ -438,3 +438,13 @@ h2::after {
 .pub-type.conference::before {
   background: #ef4444;
 }
+
+/* 내 이름 강조 표시 */
+.author-me {
+  font-weight: 700;
+  color: #0f172a;
+  background: linear-gradient(transparent 60%, #dbeafe 60%);
+  padding: 0 2px;
+  border-radius: 3px;
+}
+
