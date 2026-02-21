@@ -396,3 +396,45 @@ h2::after {
 .pub-year + .pub-list {
   margin-bottom: 10px;
 }
+
+/* publication type marker (Journal / Conference) */
+.pub-type {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.2px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  border: 1px solid transparent;
+}
+
+.pub-type::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+/* Journal = blue */
+.pub-type.journal {
+  color: #1d4ed8;
+  background: #eff6ff;
+  border-color: #bfdbfe;
+}
+.pub-type.journal::before {
+  background: #2563eb;
+}
+
+/* Conference = red */
+.pub-type.conference {
+  color: #b91c1c;
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+.pub-type.conference::before {
+  background: #ef4444;
+}
